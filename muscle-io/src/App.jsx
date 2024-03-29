@@ -2,6 +2,7 @@ import Header from "./components/Header"
 import CardInfo from "./components/CardInfo"
 import SearchBar from "./components/SearchBar"
 import Footer from "./components/Footer"
+import SearchResults from "./components/SearchResults"
 
 function App() {
   
