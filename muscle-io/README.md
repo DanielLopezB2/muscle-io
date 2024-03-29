@@ -1,8 +1,3 @@
-# React + Vite
+# Muscle IO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Muscle IO is a web application designed to help fitness enthusiasts explore a vast library of exercises categorized by muscle groups. Whether you're a beginner or a seasoned gym-goer, Muscle IO provides a user-friendly interface to discover new exercises and plan your workouts effectively 💪🏻
