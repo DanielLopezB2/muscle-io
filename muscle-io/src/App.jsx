@@ -1,20 +1,18 @@
-import Header from "./components/Header"
-import CardInfo from "./components/CardInfo"
-import SearchBar from "./components/SearchBar"
-import Footer from "./components/Footer"
-import SearchResults from "./components/SearchResults"
+import Home from './components/Home';
+import MuscleGroup from './components/MuscleGroup';
+import MuscleById from './components/MuscleById';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   
   return (
-    <div className="inset-0 -z-10 w-full flex flex-col items-center [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
-
-      <Header />
-      <CardInfo />
-      <SearchBar />
-      <Footer />
-     
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/group" element={<MuscleGroup />} />
+        <Route path="/muscle/:id" element={<MuscleById />} />
+      </Routes>
+    </Router>    
   )
 }
 
