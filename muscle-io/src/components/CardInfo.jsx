@@ -1,38 +1,28 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { fetchData } from '../services/apiService';
 
 function CardInfo() {
 
     const [data, setData] = useState([]);
+    const hasFetchedRef = useRef(false);
 
     const url = 'https://exercisedb.p.rapidapi.com/exercises/bodyPartList';
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'aefbc55d59msha04102a013d7406p1a1c0bjsn95c4c9de058f',
-            'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+            'X-RapidAPI-Key': import.meta.env.VITE_RAPIDAPI_KEY,
+            'X-RapidAPI-Host': import.meta.env.VITE_RAPIDAPI_HOST
             }
     };
 
-    const hasFetchedRef = useRef(false);
-
     useEffect(() => {
         if (!hasFetchedRef.current) {
-
-            const fetchData = async () => {
-                try {
-                    const response = await fetch(url, options);
-                    if (!response.ok) {
-                        throw new Error(`HTTP error: Status ${response.status}`);
-                    }
-                    const result = await response.json();
-                    console.log(result);
-                    setData(result);
-                } catch (error) {
-                    console.error(error);
-                }
+            const fetchDataFromAPI = async () => {
+                const result = await fetchData(url, options);
+                setData(result);
             };
 
-            fetchData();
+            fetchDataFromAPI();
             hasFetchedRef.current = true;
         }
     }, []);
