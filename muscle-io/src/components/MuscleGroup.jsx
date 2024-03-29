@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useRef, useState } from 'react';
 import { fetchData } from '../services/apiService';
+import Footer from "./Footer";
 
 
 function MuscleGroup() {
@@ -29,8 +30,6 @@ function MuscleGroup() {
             hasFetchedRef.current = true;
         }
     }, []);
-
-    console.log(data.name)
 
     return (
 
@@ -68,7 +67,11 @@ function MuscleGroup() {
 
             </div>
 
+            <Footer />
+
         </div>
+
+        
 
     )
 }
