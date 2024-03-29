@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { fetchData } from '../services/apiService';
+import { Link } from 'react-router-dom';
 
 function CardInfo() {
 
@@ -32,17 +33,17 @@ function CardInfo() {
     
             {data.map((item, index) => (
                 <div key={index} className="min-w-72 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-10 hover:scale-105 transition-all duration-500">
-                    <a href="#">
+                    <Link to={`/group/${item}`}>
                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-[#160B34]">{item.charAt(0).toUpperCase() + item.slice(1)}</h5>
-                    </a>
+                    </Link>
 
                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">A list of {item} exercises</p>
-                    <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#160B34] rounded-lg hover:bg-[#5945b6] focus:ring-4 focus:outline-none transition ease-in-out">
+                    <Link to={`/group/${item}`} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#160B34] rounded-lg hover:bg-[#5945b6] focus:ring-4 focus:outline-none transition ease-in-out">
                         Check it out
                         <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                         </svg>
-                    </a>
+                    </Link>
                 </div>
             ))}
 

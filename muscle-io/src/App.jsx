@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/group" element={<MuscleGroup />} />
+        <Route path="/group/:id" element={<MuscleGroup />} />
         <Route path="/muscle/:id" element={<MuscleById />} />
       </Routes>
     </Router>    
