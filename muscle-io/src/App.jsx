@@ -1,6 +1,7 @@
 import Header from "./components/Header"
 import CardInfo from "./components/CardInfo"
 import SearchBar from "./components/SearchBar"
+import Footer from "./components/Footer"
 
 function App() {
   
@@ -10,7 +11,8 @@ function App() {
       <Header />
       <CardInfo />
       <SearchBar />
-      
+      <Footer />
+     
     </div>
   )
 }
