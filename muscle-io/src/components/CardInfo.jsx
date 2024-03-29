@@ -29,10 +29,10 @@ function CardInfo() {
     }, []);
 
     return (
-        <div className='grid grid-cols-3 gap-4 mb-10'>
+        <div className='lg:grid lg:grid-cols-3 lg:gap-4 mb-10 md:grid md:grid-cols-2 md:gap-5'>
     
             {data.map((item, index) => (
-                <div key={index} className="min-w-72 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-10 hover:scale-105 transition-all duration-500">
+                <div key={index} className="lg:min-w-72 lg:max-w-sm p-6 md:min-w-32 md:max-w-xs bg-white border border-gray-200 rounded-lg shadow mt-10 hover:scale-105 transition-all duration-500">
                     <Link to={`/group/${item}`}>
                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-[#160B34]">{item.charAt(0).toUpperCase() + item.slice(1)}</h5>
                     </Link>
