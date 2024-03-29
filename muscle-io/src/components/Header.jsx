@@ -1,4 +1,4 @@
-export default function Header() {
+function Header() {
     return (
         <div className="text-center max-w-4xl">
             <h1 className="text-4xl font-semibold mt-16">Muscle IO</h1>
@@ -8,3 +8,5 @@ export default function Header() {
 
     )
 }
+
+export default Header
